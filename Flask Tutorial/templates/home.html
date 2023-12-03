@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>FaceSync Check-in System</title>
+</head>
+<body>
+
+    <div class="header">
+        <h1>FaceSync Check-in System</h1>
+    </div>
+
+    <div class="auth-options">
+        <a href="#" class="auth-option" onclick="showForm('login-form')">Login</a>
+        <a href="#" class="auth-option" onclick="showForm('signup-form')">Sign Up</a>
+    </div>  
+    <div class="description-container">
+        <h3>"Experience seamless access to your attendance records</h3>
+        <h3>with our online system, secured through advanced facial recognition technology."</h3>
+    </div> 
+
+    <div id="login-form" style="display:none;">
+        <form method="post" action="{{ url_for('login') }}">
+            <h3>Login Form</h3>
+            <div class="input">
+                <input type="text" id="name" name="name" placeholder="username" required>
+            </div>
+            <div class="input">
+                <input type="password" id="pwd" name="pwd" placeholder="password" required>
+            </div>
+            <div class="btn">
+                <button type="submit">Login</button>
+            </div>
+            <div class="forgot-password">
+                <a href="{{ url_for('forgot_password') }}">Forgot Password?</a>
+            </div>
+
+        </form>
+    </div>
+
+    <div id="signup-form">
+        <form method="post" action="{{ url_for('signup') }}">
+            <h3>Signup Form</h3>
+            <div class="input">     
+                <input type="text" id="name" name="name" placeholder="username" required>
+            </div>
+            <div class="input">
+                <input type="email" id="email" name="email" placeholder="email" required>
+            </div>
+            <div class="input">
+                <input type="password" id="pwd" name="pwd" placeholder="password" required>
+            </div>
+            <div class="btn">
+                <button type="submit">Register</button>
+            </div>
+            <div class="register-link">
+                <p>Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            showForm('login-form');
+        });
+    
+        function showForm(formId) {
+            document.getElementById('signup-form').style.display = 'none';
+            document.getElementById('login-form').style.display = 'none';
+    
+            document.getElementById(formId).style.display = 'block';
+        }
+    </script>
+    
+</body>
+</html>

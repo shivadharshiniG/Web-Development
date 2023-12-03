@@ -1,0 +1,142 @@
+body{
+    background: url("https://upload.wikimedia.org/wikipedia/commons/a/af/KPRIET.jpg");
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+    height:100vh;
+    color:rgb(245, 246, 247);
+}
+
+.description-container {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 900px; 
+  }
+
+.header{
+    color:#f99417;
+    border: 0px solid #0b0c0c; 
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1));
+    padding: 5px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    margin:0 auto;
+    
+}
+
+.auth-options {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    margin-bottom: 30px;
+}
+
+.auth-option {
+    margin-right: 20px;
+    text-decoration: none;
+    color: rgb(254, 254, 254);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.auth-option:hover {
+    color: #FFD700;
+}    
+
+form{
+    width: 500px;
+    margin: 100px auto 30px;
+    padding: 10px 20px 30px;
+    background-color: rgba(70, 70, 73, 0.5);
+    color: rgb(244, 237, 237);
+    font-size: 30px;
+    border-radius: 10px;
+    overflow:auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+form h3{
+    display: flex;
+    justify-content: center;
+}
+
+
+.input input{
+    width: 65%;
+    font-size: .55em;
+    border: 3px solid #4D4C7D;
+    box-shadow: 2px;
+    border-radius: 10px;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    margin: 5px 0px 25px 15px;
+    
+} 
+.input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#signup-form{
+    color: rgb(244, 30, 30);
+    display:flex;
+    justify-content: center;
+
+}
+#login-form{
+    color: rgb(244, 30, 30);
+}
+
+
+input:focus{
+    background-color: lightgoldenrodyellow;
+}
+.btn{
+    text-align: center;
+}
+.btn button {
+    background-color: #363062; 
+    color: #fff; 
+    font-size: 20px;
+    padding: 12px 24px; 
+    border-radius: 8px; 
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.btn button:hover {
+    background-color: #464261; 
+}
+
+
+.register-link{
+    display:flex;
+    font-size: large;
+    color: chartreuse;
+    justify-content: center;
+}
+
+.register-link a{
+    font-size: large;
+    color:rgb(213, 248, 13);
+}
+
+.register-link a:hover {
+    color: red;
+}
+
+
+.forgot-password a{
+    font-size: large;
+    color:rgb(248, 68, 13);
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 20px;
+}
